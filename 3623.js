@@ -5,7 +5,7 @@ var arr = [
     {name: 'width', value: 10},
     {name: 'height', value: 20}
 ] ;
-var res = arr.reduce(function(previousValue, currentValue, index, array) {
+var res = arr.reduce(function(previousValue, currentValue) {
     previousValue[currentValue.name] = currentValue.value;
     return previousValue;
 }, {})
