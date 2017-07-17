@@ -1,11 +1,20 @@
 /**
  * Created by Egor on 15.07.2017.
  */
-function truncate(str, count) {
-    return (str.length > count) ?
-        str.slice(0, count - 3) + '...' : str;
+const str = 'Мама мыла раму';
+
+function truncate(str, len) {
+    const arr = str.split(' ');
+    let newStr = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if ((newStr.length + arr[i].length + 1) > len) {
+            return newStr + ( i < arr.length ? '...' : '' );
+        }
+        else newStr += ' ' + arr[i];
+    }
+    return newStr;
 }
 
-var str = 'Мама мыла раму';
-alert (truncate(str, 7)); // 'Мама...'
-alert (truncate(str, 12)); // 'Мама мыла...'
+alert( truncate(str, 7) );
+alert( truncate(str, 11) );

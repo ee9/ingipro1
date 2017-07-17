@@ -1,21 +1,19 @@
 /**
  * Created by Egor on 15.07.2017.
  */
-function sum() {
-    var result = 0;
+function sum(a) {
+    let sum = a;
 
-    for (var i = 0; i < arguments.length; i++) {
-        result += arguments[i];
+    function sumSum(b) {
+        sum += b;
+        return sumSum;
     }
 
-    return result ;
-}
+    sumSum.toString = () => sum;
+    sumSum.valueOf = sumSum.toString;
 
-alert( sum() ); // 0
-alert( sum(1) ); // 1
-alert( sum(1, 2) ); // 3
-alert( sum(1, 2, 3) ); // 6
-alert( sum(1, 2, 3, 4) ); // 10
+    return sumSum ;
+}
 
 alert ( sum(1));       // => 1
 alert ( sum(1)(2));    // => 3
