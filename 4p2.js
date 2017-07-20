@@ -16,3 +16,5 @@ function sumNum(arr) {
 }
 
 alert (sumNum ([4, 2]));
+
+//
