@@ -17,3 +17,5 @@ function palindrome(str) {
 alert( palindrome("eye") ); // true
 alert( palindrome("hello") ); // false
 alert( palindrome("А роза упала на лапу Азора") ); // true
+
+//
