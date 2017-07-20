@@ -2,8 +2,7 @@
  * Created by Egor on 18.07.2017.
  */
 function myReplace(str, before, after) {
-    let result = "";
-    let index = str.indexOf(before);
+    const result = "";
 
     if (before[0].toUpperCase() === before[0]) {
         after = after[0].toUpperCase() + after.slice(1) ;
@@ -11,9 +10,7 @@ function myReplace(str, before, after) {
         after = after[0].toLowerCase() + after.slice(1) ;
     }
 
-    result = str.replace(before,after);
-
-    return result;
+    return str.replace(before,after);
 }
 alert (myReplace("Let us get back to more Coding", "Coding", "algorithms"));
 // "Let us get back to more Algorithms".
